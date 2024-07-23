@@ -103,4 +103,4 @@ class CartItem(models.Model):
         ordering = ("product",)
 
     def __str__(self):
-        return f"Продукт - {self.product.name}, продукт - {self.quantity}"
+        return f"Продукт - {self.product.name}, количество - {self.quantity}"

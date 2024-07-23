@@ -15,7 +15,7 @@ Food Store - это проект интернет-магазина с корзи
 
 ## Установка
 
-### Клонирование репозитория
+### Клонируйте репозиторий
 
 ```bash
 git clone git@github.com:Milkyaway13/food_store.git
@@ -27,7 +27,7 @@ cd food_store
 ### Cоздайте и активируйте виртуальное окружение:
 
 ```
-python3 -m venv env
+python -m venv env
 ```
 
 * Если у вас Linux/macOS
@@ -42,30 +42,28 @@ python3 -m venv env
     source env/scripts/activate
     ```
 * Обновите установщик пакетов
-```
-python3 -m pip install --upgrade pip
-```
+    ```
+    python -m pip install --upgrade pip
+    ```
 
 * Установите зависимости из файла requirements.txt:
 
-```
-pip install -r requirements.txt
-```
+    ```
+    pip install -r requirements.txt
+    ```
 
 * Выполните миграции:
 
-```
-python3 manage.py migrate
-```
+    ```
+    python manage.py migrate
+    ```
 
 * Запустите проект:
 
-```
-python3 manage.py runserver
-```
-## Использование
-
-### API Эндпоинты
+    ```
+    python manage.py runserver
+    ```
+## Примеры запросов
 
 #### Добавление продукта в корзину
 
@@ -78,4 +76,30 @@ python3 manage.py runserver
       "product_id": 1,
       "quantity": 2
   }
+  ```
+- Ответ:
+  ```json
+  {
+      "status": "Product added to cart"
+  }
+  ```
+#### Удаление продукта из корзины
+
+- **URL:** `/store/cart/remove_product/`
+- **Метод:** `POST`
+- **Тело запроса (JSON):**
+
+  ```json
+  {
+      "product_id": 8
+  }
+  ```
+ - Ответ:
+ 
+      Код состояния HTTP 204 No content
+   
+## Автор
+[Боярчук Василий](https://github.com/Milkyaway13/)
+  
+  
 

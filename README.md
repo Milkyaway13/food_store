@@ -27,19 +27,19 @@ cd food_store
 ### Cоздайте и активируйте виртуальное окружение:
 
 ```
-python -m venv env
+python -m venv venv
 ```
 
 * Если у вас Linux/macOS
 
     ```
-    source env/bin/activate
+    source venv/bin/activate
     ```
 
 * Если у вас windows
 
     ```
-    source env/scripts/activate
+    source venv/scripts/activate
     ```
 * Обновите установщик пакетов
     ```
